@@ -12,10 +12,10 @@ public class BrowserFactory {
 
 	public static WebDriver startApplication(WebDriver driver,String browserName,String appURL)
 	{
-		if(browserName.equals("Chrome"))
+		if(browserName.equals("IE"))
 		{
-			System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
-			driver=new ChromeDriver();
+			System.setProperty("webdriver.ie.driver","./Drivers/InternetExplorer.exe");
+			driver=new InternetExplorerDriver();
 			
 		}
 		else if(browserName.equals("Firefox"))
@@ -23,10 +23,10 @@ public class BrowserFactory {
 			System.setProperty("webdriver.gecko.driver","./Drivers/geckodriver.exe");
 			driver=new FirefoxDriver();
 		}
-		else if(browserName.equals("IE"))
+		else if(browserName.equals("chrome"))
 		{
-			System.setProperty("webdriver.ie.driver","./Drivers/IEDriverServer.exe");
-			driver=new InternetExplorerDriver();
+			System.setProperty("webdriver.Chrome.driver","./Drivers/ChromeDriverServer.exe");
+			driver=new ChromeDriver();
 		}
 		else 
 		{
